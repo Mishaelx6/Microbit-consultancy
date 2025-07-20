@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | Microbits Consultancy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#1e3a8a',
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="photos/logo.jpeg" alt="Logo" class="h-10 w-10 rounded" />
+      <span class="font-bold text-xl">Microbits <span class="text-royal">Consultancy</span></span>
+    </a>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-royal">Home</a>
+      <a href="about.html" class="hover:text-royal">About</a>
+      <a href="service.html" class="hover:text-royal">Services</a>
+      <a href="contact.html" class="text-royal font-semibold">Contact</a>
+    </nav>
+    <button id="menuToggle" class="md:hidden text-2xl text-royal z-50">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40">
+    <div class="bg-white w-64 h-full p-6 relative">
+      <button id="menuClose" class="absolute top-4 right-4 text-2xl text-royal">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="mt-10 flex flex-col space-y-4">
+        <a href="index.html" class="hover:text-royal">Home</a>
+        <a href="about.html" class="hover:text-royal">About</a>
+        <a href="service.html" class="hover:text-royal">Services</a>
+        <a href="contact.html" class="text-royal font-semibold">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="bg-royal text-white text-center py-20 px-6">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Microbits Consultancy</h1>
+  <p class="text-lg max-w-3xl mx-auto">We’re ready to help you solve problems and deliver transformation</p>
+</section>
+
+<!-- Contact Info + Form -->
+<section class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+  <div>
+    <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+    <p class="mb-4">We are available via email or phone, or use the contact form to reach out.</p>
+
+    <div class="space-y-4 text-lg">
+      <p><i class="fas fa-map-marker-alt text-royal mr-2"></i> Block 51, FHA Phase 2, Karu, Abuja</p>
+      <p><i class="fas fa-envelope text-royal mr-2"></i> <a href="mailto:drsamowokoniran@gmail.com" class="text-royal underline">drsamowokoniran@gmail.com</a></p>
+      <p><i class="fas fa-phone text-royal mr-2"></i> +234-7068123337</p>
+    </div>
+
+    <div class="mt-6">
+      <a href="https://wa.me/2347068123337" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg mt-4">
+        <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <form class="bg-gray-50 p-6 rounded-lg shadow space-y-4">
+      <div>
+        <label class="block mb-1 font-medium">Name</label>
+        <input type="text" class="w-full border border-gray-300 p-3 rounded" required />
+      </div>
+      <div>
+        <label class="block mb-1 font-medium">Email</label>
+        <input type="email" class="w-full border border-gray-300 p-3 rounded" required />
+      </div>
+      <div>
+        <label class="block mb-1 font-medium">Message</label>
+        <textarea rows="5" class="w-full border border-gray-300 p-3 rounded" required></textarea>
+      </div>
+      <button type="submit" class="bg-royal text-white px-6 py-3 rounded hover:bg-blue-900 transition">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-20 bg-gray-100 text-center px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Need a Custom Solution?</h2>
+    <p class="mb-6 text-lg">Let’s help you develop winning strategies, compliance systems, or training programs that actually work.</p>
+    <a href="mailto:drsamowokoniran@gmail.com" class="bg-royal text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition">
+      Request Consultation
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-10 text-center">
+  <p class="text-sm mb-2">&copy; 2025 Microbits Consultancy Limited. All rights reserved.</p>
+  <p class="text-xs text-gray-400">Powered by Bakatecknologies</p>
+</footer>
+
+<!-- Mobile nav logic -->
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const closeBtn = document.getElementById("menuClose");
+  const menu = document.getElementById("mobileMenu");
+
+  toggle.addEventListener("click", () => menu.classList.remove("hidden"));
+  closeBtn.addEventListener("click", () => menu.classList.add("hidden"));
+  menu.addEventListener("click", (e) => {
+    if (e.target === menu) {
+      menu.classList.add("hidden");
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microbits Consultancy Limited</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#1e3a8a',
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    .carousel-bg {
+      animation: carousel 24s infinite ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+    @keyframes carousel {
+      0%, 25% { background-image: url('photos/pick3.jpg'); }
+      26%, 50% { background-image: url('photos/pick7.jpg'); }
+      51%, 75% { background-image: url('photos/pick4.jpg'); }
+      76%, 100% { background-image: url('photos/pick9.jpg'); }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+<!-- ✅ Navbar -->
+<header class="bg-white shadow fixed top-0 w-full z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+    <div class="flex items-center space-x-3">
+      <img src="photos/logo.jpeg" alt="Logo" class="h-10 w-10 rounded" />
+      <div class="text-xl font-bold">Microbits <span class="text-royal">Consultancy</span></div>
+    </div>
+    <button id="navToggle" class="text-2xl md:hidden text-royal">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="navbar" class="hidden md:flex space-x-6 items-center">
+      <a href="index.html" class="hover:text-royal font-semibold">Home</a>
+      <a href="about.html" class="hover:text-royal">About</a>
+      <a href="services.html" class="hover:text-royal">Services</a>
+     <a href="contact.html" class="hover:text-royal">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40">
+    <div class="bg-white w-64 h-full shadow-lg p-6 relative">
+      <button id="closeMenu" class="absolute top-4 right-4 text-2xl text-royal">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="flex flex-col space-y-4 mt-10">
+       <a href="index.html" class="hover:text-royal font-semibold">Home</a>
+      <a href="about.html" class="hover:text-royal">About</a>
+      <a href="services.html" class="hover:text-royal">Services</a>
+     <a href="contact.html" class="hover:text-royal">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ✅ Hero Section -->
+<section id="hero" class="carousel-bg text-white min-h-screen flex items-center justify-center text-center px-6 pt-28 relative">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative z-10 max-w-3xl">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">A New World of Performance & Relationship</h1>
+    <p class="text-lg md:text-xl mb-6">Microbits is a globally recognized consulting firm providing tailored training and consulting services across strategy, finance, audit, and compliance.</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <a href="#about" class="bg-royal text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition">Learn More</a>
+      <a href="#contact" class="border border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ About Section -->
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
+    <p class="text-lg mb-6">
+      Microbits is a leading indigenous and globally recognized consulting firm. We offer a wide range of services in strategy, finance, taxation, audit, digital marketing, and more. We are certified by the Centre for Management Development and driven by a passion to deliver results that surpass expectations.
+    </p>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-8 text-left">
+      <div>
+        <h3 class="text-royal text-xl font-semibold mb-2">Our Vision</h3>
+        <p class="text-gray-700">
+          “To become Client first choice in problem solving and innovation.”
+        </p>
+      </div>
+      <div>
+        <h3 class="text-royal text-xl font-semibold mb-2">Our Mission</h3>
+        <p class="text-gray-700">
+          “We will treat every Client request as a goldmine to generate transformational outcomes and sustainable new innovation in problem solving.”
+        </p>
+      </div>
+    </div>
+
+    <a href="#services" class="mt-10 inline-block bg-royal text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition">
+      Explore Our Services
+    </a>
+  </div>
+</section>
+
+<!-- ✅ Services Section -->
+<section id="services" class="py-20 bg-royal text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">What We Do</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white text-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-chalkboard-teacher text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Certified Training</h3>
+        <p>Tailored training in specialized areas aligned with international best practices for individual and organizational growth.</p>
+      </div>
+      <div class="bg-white text-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-chart-line text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Business Consulting</h3>
+        <p>Advisory in accounting, auditing, IGR, management, tax, and finance for public and private institutions.</p>
+      </div>
+      <div class="bg-white text-gray-800 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-cogs text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Strategic Solutions</h3>
+        <p>Innovative problem-solving using tested strategic models to transform challenges into growth opportunities.</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="#contact" class="bg-white text-royal px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+        Talk to a Consultant
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Core Values -->
+ <section id="values" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10">Our Core Values — <span class="text-royal">PRIDE</span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+      <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-fire text-royal text-2xl mb-2"></i>
+        <p class="font-semibold">Passion</p>
+        <p class="text-sm">Our love for delivering transformation fuels us.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-hands-helping text-royal text-2xl mb-2"></i>
+        <p class="font-semibold">Respect</p>
+        <p class="text-sm">For our clients, partners, and team.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-scale-balanced text-royal text-2xl mb-2"></i>
+        <p class="font-semibold">Integrity</p>
+        <p class="text-sm">We stand for trust and accountability.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-user-shield text-royal text-2xl mb-2"></i>
+        <p class="font-semibold">Discipline</p>
+        <p class="text-sm">Professional standards drive our service.</p>
+      </div>
+      <div class="bg-gray-100 p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-heart text-royal text-2xl mb-2"></i>
+        <p class="font-semibold">Empathy</p>
+        <p class="text-sm">We listen and understand to solve.</p>
+      </div>
+    </div>
+
+    <a href="#contact" class="mt-10 inline-block bg-royal text-white px-6 py-3 rounded-lg hover:bg-blue-900 transition">
+      Work With Us
+    </a>
+  </div>
+</section>
+
+
+<section class="py-20 bg-gradient-to-r from-royal to-blue-900 text-white text-center px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Organization?</h2>
+    <p class="mb-6 text-lg">Let Microbits partner with you to turn challenges into opportunity and innovation. Experience solutions that go beyond your expectations.</p>
+    <a href="#contact" class="bg-white text-royal px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+      Get in Touch
+    </a>
+  </div>
+</section>
+
+<!-- ✅ Footer -->
+<footer id="contact" class="bg-gray-900 text-white py-16">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Microbits</h4>
+      <p>Block 51, FHA Phase 2, Karu, Abuja</p>
+      <p>Email: <a href="mailto:drsamowokoniran@gmail.com" class="text-blue-400">drsamowokoniran@gmail.com</a></p>
+      <p>Phone: +234-7068123337</p>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Company</h4>
+      <ul class="space-y-2">
+        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+        <li><a href="#values" class="hover:text-blue-400">Core Values</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+      <div class="flex space-x-4">
+        <a href="#" class="text-blue-400"><i class="fab fa-facebook fa-xl"></i></a>
+        <a href="#" class="text-blue-400"><i class="fab fa-twitter fa-xl"></i></a>
+        <a href="#" class="text-blue-400"><i class="fab fa-instagram fa-xl"></i></a>
+      </div>
+    </div>
+  </div>
+  <p class="text-center text-sm mt-10 text-gray-400">&copy; 2025 Microbits Consultancy Limited. All rights reserved.</p>
+</footer>
+
+<!-- ✅ JS: Navbar Toggle -->
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
+
+  navToggle.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+
+  mobileMenu.addEventListener("click", (e) => {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+</script>
+</body>
+</html>

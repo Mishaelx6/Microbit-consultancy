@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | Microbits Consultancy Limited</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#1e3a8a',
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="text-gray-800 bg-white">
+
+<!-- ✅ Header -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="photos/logo.jpeg" alt="Logo" class="h-10 w-10 rounded" />
+      <span class="font-bold text-xl">Microbits <span class="text-royal">Consultancy</span></span>
+    </a>
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-royal">Home</a>
+      <a href="about.html" class="text-royal font-semibold">About</a>
+      <a href="service.html" class="hover:text-royal">Services</a>
+      <a href="contact.html" class="hover:text-royal">Contact</a>
+    </nav>
+    <!-- Mobile toggle -->
+    <button id="menuToggle" class="md:hidden text-2xl text-royal z-50">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+   <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40">
+    <div class="bg-white w-64 h-full p-6 relative">
+      <button id="menuClose" class="absolute top-4 right-4 text-2xl text-royal">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="mt-10 flex flex-col space-y-4">
+        <a href="index.html" class="hover:text-royal">Home</a>
+        <a href="about.html" class="text-royal font-semibold">About</a>
+        <a href="service.html" class="hover:text-royal">Services</a>
+        <a href="contact.html" class="hover:text-royal">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- ✅ Hero -->
+<section class="bg-royal text-white text-center py-20 px-6">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">About Microbits Consultancy</h1>
+  <p class="text-lg max-w-3xl mx-auto">Delivering Performance, Innovation & Strategic Growth</p>
+</section>
+
+<!-- ✅ Who We Are -->
+<section class="py-20 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-8">Who We Are</h2>
+  <p class="text-lg leading-relaxed mb-6">
+    Microbits is one of the leading indigenous, globally recognized consulting firms delivering customized training and consulting solutions across sectors. With a focus on strategy, finance, taxation, compliance, and digital innovation, we transform challenges into profitable, long-term opportunities.
+  </p>
+  <p class="text-lg leading-relaxed">
+    Backed by a professional team with decades of experience, our model blends analysis, innovation, and transformation. As a Centre for Management Development certified firm, we help businesses improve efficiency, develop workforce capability, and achieve breakthrough results.
+  </p>
+</section>
+
+<!-- ✅ Vision & Mission -->
+<section class="py-20 bg-gray-50 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Vision & Mission</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded shadow text-center hover:shadow-lg transition">
+        <i class="fas fa-lightbulb text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+        <p>To become the client’s first choice in problem solving and innovation.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow text-center hover:shadow-lg transition">
+        <i class="fas fa-bullseye text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+        <p>We treat every client request as a goldmine to generate transformational outcomes and sustainable new innovation in problem solving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ What Drives Us -->
+<section class="py-20 px-6 max-w-6xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-10">What Drives Us</h2>
+  <p class="text-lg leading-relaxed mb-6">
+    At Microbits, we believe consulting is more than a profession — it's a mission. We do not just solve problems; we transform them into business innovations. We stand in the gap for our clients and take on their biggest challenges with strategic thinking, professionalism, and compassion.
+  </p>
+  <p class="text-lg leading-relaxed mb-6">
+    Our problem-solving approach is fueled by our proven models and dedication to results. We are proud to have reinvented the business of consulting by delivering what we promise — beyond expectations.
+  </p>
+</section>
+
+<!-- ✅ Track Record -->
+<section class="py-20 bg-gray-100 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Our Track Record</h2>
+    <p class="text-lg leading-relaxed mb-10 text-center">
+      With nearly a decade of consulting experience, Microbits has organized training, retreats, and workshops for public and private institutions globally. In partnership with our parent company Better Ways, we’ve delivered services to multinationals and blue-chip organizations.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-users text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-bold">20+ Years Avg Faculty Exp</h3>
+        <p>Seasoned experts lead our training & consulting teams.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-globe text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-bold">Global Reach</h3>
+        <p>Projects delivered across multiple industries & countries.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow hover:shadow-lg transition">
+        <i class="fas fa-award text-royal text-3xl mb-4"></i>
+        <h3 class="text-xl font-bold">Certified & Trusted</h3>
+        <p>CMD certified with a reputation for integrity and delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Call to Action Section -->
+<section class="py-20 bg-gradient-to-r from-royal to-blue-900 text-white text-center px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Let’s Build Solutions Together</h2>
+    <p class="mb-6 text-lg">Partner with Microbits to unlock growth, transform systems, and make lasting impact through strategy, training, and innovation.</p>
+    <a href="contact.html" class="bg-white text-royal px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+      Contact Us Today
+    </a>
+  </div>
+</section>
+
+<!-- ✅ Footer -->
+<footer class="bg-gray-900 text-white py-10 text-center">
+  <p class="text-sm mb-2">&copy; 2025 Microbits Consultancy Limited. All rights reserved.</p>
+  <p class="text-xs text-gray-400">Powered by Bakatecknologies</p>
+</footer>
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const closeBtn = document.getElementById("menuClose");
+  const menu = document.getElementById("mobileMenu");
+
+  toggle.addEventListener("click", () => menu.classList.remove("hidden"));
+  closeBtn.addEventListener("click", () => menu.classList.add("hidden"));
+  menu.addEventListener("click", (e) => {
+    if (e.target === menu) {
+      menu.classList.add("hidden");
+    }
+  });
+</script>
+
+</body>
+</html>

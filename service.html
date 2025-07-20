@@ -1,0 +1,130 @@
+<!-- Save this as service.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Services | Microbits Consultancy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#1e3a8a',
+          },
+        },
+      },
+    };
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center relative">
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="photos/logo.jpeg" alt="Logo" class="h-10 w-10 rounded" />
+      <span class="font-bold text-xl">Microbits <span class="text-royal">Consultancy</span></span>
+    </a>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-royal">Home</a>
+      <a href="about.html" class="hover:text-royal">About</a>
+      <a href="service.html" class="text-royal font-semibold">Services</a>
+      <a href="contact.html" class="hover:text-royal">Contact</a>
+    </nav>
+    <button id="menuToggle" class="md:hidden text-2xl text-royal z-50">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40">
+    <div class="bg-white w-64 h-full p-6 relative">
+      <button id="menuClose" class="absolute top-4 right-4 text-2xl text-royal">
+        <i class="fas fa-times"></i>
+      </button>
+      <nav class="mt-10 flex flex-col space-y-4">
+        <a href="index.html" class="hover:text-royal">Home</a>
+        <a href="about.html" class="hover:text-royal">About</a>
+        <a href="service.html" class="text-royal font-semibold">Services</a>
+        <a href="contact.html" class="hover:text-royal">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="bg-royal text-white text-center py-20 px-6">
+  <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+  <p class="text-lg max-w-3xl mx-auto">Tailored solutions in training, strategy, finance, auditing, and more.</p>
+</section>
+
+<!-- Services Grid -->
+<section class="py-20 px-6 bg-gray-100">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+    <div class="bg-white p-6 rounded shadow hover:shadow-xl transition">
+      <i class="fas fa-chalkboard text-royal text-3xl mb-3"></i>
+      <h3 class="text-xl font-semibold mb-2">Certified Trainings</h3>
+      <p>Offering globally relevant and practical trainings in leadership, public finance, strategy, procurement, and auditing.</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow hover:shadow-xl transition">
+      <i class="fas fa-sitemap text-royal text-3xl mb-3"></i>
+      <h3 class="text-xl font-semibold mb-2">Strategy & Innovation</h3>
+      <p>Using advanced frameworks to build innovative systems and solve real-world problems.</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow hover:shadow-xl transition">
+      <i class="fas fa-balance-scale text-royal text-3xl mb-3"></i>
+      <h3 class="text-xl font-semibold mb-2">Taxation & Compliance</h3>
+      <p>Offering taxation advisory, auditing, due diligence, and regulatory compliance services.</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow hover:shadow-xl transition">
+      <i class="fas fa-coins text-royal text-3xl mb-3"></i>
+      <h3 class="text-xl font-semibold mb-2">Finance & IGR</h3>
+      <p>Designing internal control systems, training revenue teams, and automating financial processes.</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow hover:shadow-xl transition">
+      <i class="fas fa-chart-bar text-royal text-3xl mb-3"></i>
+      <h3 class="text-xl font-semibold mb-2">Digital Marketing</h3>
+      <p>Delivering smart marketing solutions to enhance visibility and engagement.</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow hover:shadow-xl transition">
+      <i class="fas fa-users-cog text-royal text-3xl mb-3"></i>
+      <h3 class="text-xl font-semibold mb-2">Business Management</h3>
+      <p>Offering business advisory and startup support with a strategic and operational focus.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 bg-royal text-white text-center px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4">Ready to Transform Your Organization?</h2>
+    <p class="mb-6 text-lg">Our expert-led consulting and training services are designed to deliver impact. Partner with Microbits today.</p>
+    <a href="contact.html" class="bg-white text-royal px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+      Book a Session
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-10 text-center">
+  <p class="text-sm mb-2">&copy; 2025 Microbits Consultancy Limited. All rights reserved.</p>
+  <p class="text-xs text-gray-400">Powered by Bakatecknologies</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const closeBtn = document.getElementById("menuClose");
+  const menu = document.getElementById("mobileMenu");
+
+  toggle.addEventListener("click", () => menu.classList.remove("hidden"));
+  closeBtn.addEventListener("click", () => menu.classList.add("hidden"));
+  menu.addEventListener("click", (e) => {
+    if (e.target === menu) {
+      menu.classList.add("hidden");
+    }
+  });
+</script>
+
+</body>
+</html>
